@@ -1,0 +1,19 @@
+<h1>New bairro_micro</h1>
+
+<% form_for(@bairro_micro) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :bairro_id %><br />
+    <%= f.text_field :bairro_id %>
+  </p>
+  <p>
+    <%= f.label :micro_id %><br />
+    <%= f.text_field :micro_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', bairro_micros_path %>

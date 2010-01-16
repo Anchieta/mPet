@@ -1,0 +1,38 @@
+<p>
+  <b>Nome:</b>
+  <%=h @contato.nome %>
+</p>
+
+<p>
+  <b>Cargo:</b>
+  <%=h @contato.cargo %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @contato.email %>
+</p>
+
+<p>
+  <b>Celular:</b>
+  <%=h @contato.celular %>
+</p>
+
+<p>
+  <b>Dtaniver:</b>
+  <%=h @contato.dtaniver %>
+</p>
+
+<p>
+  <b>Ativo:</b>
+  <%=h @contato.ativo %>
+</p>
+
+<p>
+  <b>Keycod:</b>
+  <%=h @contato.keycod %>
+</p>
+
+
+<%= link_to 'Edit', edit_contato_path(@contato) %> |
+<%= link_to 'Back', contatos_path %>

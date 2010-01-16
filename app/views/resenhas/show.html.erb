@@ -1,0 +1,13 @@
+<p>
+  <b>Texto:</b>
+  <%=h @resenha.texto %>
+</p>
+
+<p>
+  <b>Empresa:</b>
+  <%=h @resenha.empresa_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_resenha_path(@resenha) %> |
+<%= link_to 'Back', resenhas_path %>

@@ -1,0 +1,20 @@
+<h1>Editing bairro_micro</h1>
+
+<% form_for(@bairro_micro) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :bairro_id %><br />
+    <%= f.text_field :bairro_id %>
+  </p>
+  <p>
+    <%= f.label :micro_id %><br />
+    <%= f.text_field :micro_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @bairro_micro %> |
+<%= link_to 'Back', bairro_micros_path %>

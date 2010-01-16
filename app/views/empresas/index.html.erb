@@ -1,0 +1,34 @@
+<h1>Listing empresas</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Fanta</th>
+    <th>Cnpj</th>
+    <th>Ie</th>
+    <th>Logop</th>
+    <th>Logog</th>
+    <th>Site</th>
+    <th>Pchave</th>
+  </tr>
+
+<% @empresas.each do |empresa| %>
+  <tr>
+    <td><%=h empresa.nome %></td>
+    <td><%=h empresa.fanta %></td>
+    <td><%=h empresa.cnpj %></td>
+    <td><%=h empresa.ie %></td>
+    <td><%=h empresa.logop %></td>
+    <td><%=h empresa.logog %></td>
+    <td><%=h empresa.site %></td>
+    <td><%=h empresa.pchave %></td>
+    <td><%= link_to 'Show', empresa %></td>
+    <td><%= link_to 'Edit', edit_empresa_path(empresa) %></td>
+    <td><%= link_to 'Destroy', empresa, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New empresa', new_empresa_path %>

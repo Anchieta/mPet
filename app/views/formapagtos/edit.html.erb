@@ -1,0 +1,20 @@
+<h1>Editing formapagto</h1>
+
+<% form_for(@formapagto) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :imgp %><br />
+    <%= f.text_field :imgp %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @formapagto %> |
+<%= link_to 'Back', formapagtos_path %>

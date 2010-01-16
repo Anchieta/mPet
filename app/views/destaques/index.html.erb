@@ -1,0 +1,28 @@
+<h1>Listing destaques</h1>
+
+<table>
+  <tr>
+    <th>Texto</th>
+    <th>Imgp</th>
+    <th>Url</th>
+    <th>Target</th>
+    <th>Empresa</th>
+  </tr>
+
+<% @destaques.each do |destaque| %>
+  <tr>
+    <td><%=h destaque.texto %></td>
+    <td><%=h destaque.imgp %></td>
+    <td><%=h destaque.url %></td>
+    <td><%=h destaque.target %></td>
+    <td><%=h destaque.empresa_id %></td>
+    <td><%= link_to 'Show', destaque %></td>
+    <td><%= link_to 'Edit', edit_destaque_path(destaque) %></td>
+    <td><%= link_to 'Destroy', destaque, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New destaque', new_destaque_path %>

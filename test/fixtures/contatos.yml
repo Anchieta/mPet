@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyString
+  cargo: MyString
+  email: MyString
+  celular: MyString
+  dtaniver: 2009-11-02 23:49:51
+  ativo: MyString
+  keycod: MyString
+
+two:
+  nome: MyString
+  cargo: MyString
+  email: MyString
+  celular: MyString
+  dtaniver: 2009-11-02 23:49:51
+  ativo: MyString
+  keycod: MyString

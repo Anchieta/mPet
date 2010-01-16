@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyString
+  logradouro: MyString
+  compl: MyString
+  cep: MyString
+  tel: MyString
+  email: MyString
+  horaatendimento: MyString
+  obs: MyText
+  visivel: MyString
+  latitude: 9.99
+  longitude: 9.99
+  empresa_id: 1
+  tplogradouro_id: 1
+  macro: 1
+
+two:
+  nome: MyString
+  logradouro: MyString
+  compl: MyString
+  cep: MyString
+  tel: MyString
+  email: MyString
+  horaatendimento: MyString
+  obs: MyText
+  visivel: MyString
+  latitude: 9.99
+  longitude: 9.99
+  empresa_id: 1
+  tplogradouro_id: 1
+  macro: 1

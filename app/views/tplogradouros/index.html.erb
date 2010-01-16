@@ -1,0 +1,22 @@
+<h1>Listing tplogradouros</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Abrev</th>
+  </tr>
+
+<% @tplogradouros.each do |tplogradouro| %>
+  <tr>
+    <td><%=h tplogradouro.nome %></td>
+    <td><%=h tplogradouro.abrev %></td>
+    <td><%= link_to 'Show', tplogradouro %></td>
+    <td><%= link_to 'Edit', edit_tplogradouro_path(tplogradouro) %></td>
+    <td><%= link_to 'Destroy', tplogradouro, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tplogradouro', new_tplogradouro_path %>

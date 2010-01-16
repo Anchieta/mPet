@@ -1,0 +1,31 @@
+<h1>New micro</h1>
+
+<% form_for(@micro) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :nomeseo %><br />
+    <%= f.text_field :nomeseo %>
+  </p>
+  <p>
+    <%= f.label :ordem %><br />
+    <%= f.text_field :ordem %>
+  </p>
+  <p>
+    <%= f.label :visivel %><br />
+    <%= f.text_field :visivel %>
+  </p>
+  <p>
+    <%= f.label :macro_id %><br />
+    <%= f.text_field :macro_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', micros_path %>

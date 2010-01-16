@@ -1,0 +1,24 @@
+<h1>Editing bairro</h1>
+
+<% form_for(@bairro) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :nomeseo %><br />
+    <%= f.text_field :nomeseo %>
+  </p>
+  <p>
+    <%= f.label :cidade_id %><br />
+    <%= f.text_field :cidade_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @bairro %> |
+<%= link_to 'Back', bairros_path %>

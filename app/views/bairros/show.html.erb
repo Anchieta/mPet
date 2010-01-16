@@ -1,0 +1,18 @@
+<p>
+  <b>Nome:</b>
+  <%=h @bairro.nome %>
+</p>
+
+<p>
+  <b>Nomeseo:</b>
+  <%=h @bairro.nomeseo %>
+</p>
+
+<p>
+  <b>Cidade:</b>
+  <%=h @bairro.cidade_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_bairro_path(@bairro) %> |
+<%= link_to 'Back', bairros_path %>

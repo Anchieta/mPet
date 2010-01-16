@@ -1,0 +1,28 @@
+<p>
+  <b>Nome:</b>
+  <%=h @micro.nome %>
+</p>
+
+<p>
+  <b>Nomeseo:</b>
+  <%=h @micro.nomeseo %>
+</p>
+
+<p>
+  <b>Ordem:</b>
+  <%=h @micro.ordem %>
+</p>
+
+<p>
+  <b>Visivel:</b>
+  <%=h @micro.visivel %>
+</p>
+
+<p>
+  <b>Macro:</b>
+  <%=h @micro.macro_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_micro_path(@micro) %> |
+<%= link_to 'Back', micros_path %>

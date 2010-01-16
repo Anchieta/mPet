@@ -1,0 +1,5 @@
+log
+tmp
+*.swp
+*.swo
+db/*.sqlite3

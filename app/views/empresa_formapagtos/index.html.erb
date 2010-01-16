@@ -1,0 +1,22 @@
+<h1>Listing empresa_formapagtos</h1>
+
+<table>
+  <tr>
+    <th>Empresa</th>
+    <th>Formapagto</th>
+  </tr>
+
+<% @empresa_formapagtos.each do |empresa_formapagto| %>
+  <tr>
+    <td><%=h empresa_formapagto.empresa_id %></td>
+    <td><%=h empresa_formapagto.formapagto_id %></td>
+    <td><%= link_to 'Show', empresa_formapagto %></td>
+    <td><%= link_to 'Edit', edit_empresa_formapagto_path(empresa_formapagto) %></td>
+    <td><%= link_to 'Destroy', empresa_formapagto, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New empresa_formapagto', new_empresa_formapagto_path %>

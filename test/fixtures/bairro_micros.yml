@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  bairro_id: 1
+  micro_id: 1
+
+two:
+  bairro_id: 1
+  micro_id: 1

@@ -1,0 +1,20 @@
+<h1>Editing tplogradouro</h1>
+
+<% form_for(@tplogradouro) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :abrev %><br />
+    <%= f.text_field :abrev %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @tplogradouro %> |
+<%= link_to 'Back', tplogradouros_path %>

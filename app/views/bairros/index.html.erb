@@ -1,0 +1,24 @@
+<h1>Listing bairros</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Nomeseo</th>
+    <th>Cidade</th>
+  </tr>
+
+<% @bairros.each do |bairro| %>
+  <tr>
+    <td><%=h bairro.nome %></td>
+    <td><%=h bairro.nomeseo %></td>
+    <td><%=h bairro.cidade_id %></td>
+    <td><%= link_to 'Show', bairro %></td>
+    <td><%= link_to 'Edit', edit_bairro_path(bairro) %></td>
+    <td><%= link_to 'Destroy', bairro, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New bairro', new_bairro_path %>

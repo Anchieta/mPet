@@ -1,0 +1,68 @@
+<h1>Editing unidade</h1>
+
+<% form_for(@unidade) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :logradouro %><br />
+    <%= f.text_field :logradouro %>
+  </p>
+  <p>
+    <%= f.label :compl %><br />
+    <%= f.text_field :compl %>
+  </p>
+  <p>
+    <%= f.label :cep %><br />
+    <%= f.text_field :cep %>
+  </p>
+  <p>
+    <%= f.label :tel %><br />
+    <%= f.text_field :tel %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :horaatendimento %><br />
+    <%= f.text_field :horaatendimento %>
+  </p>
+  <p>
+    <%= f.label :obs %><br />
+    <%= f.text_area :obs %>
+  </p>
+  <p>
+    <%= f.label :visivel %><br />
+    <%= f.text_field :visivel %>
+  </p>
+  <p>
+    <%= f.label :latitude %><br />
+    <%= f.text_field :latitude %>
+  </p>
+  <p>
+    <%= f.label :longitude %><br />
+    <%= f.text_field :longitude %>
+  </p>
+  <p>
+    <%= f.label :empresa_id %><br />
+    <%= f.text_field :empresa_id %>
+  </p>
+  <p>
+    <%= f.label :tplogradouro_id %><br />
+    <%= f.text_field :tplogradouro_id %>
+  </p>
+  <p>
+    <%= f.label :macro %><br />
+    <%= f.text_field :macro %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @unidade %> |
+<%= link_to 'Back', unidades_path %>

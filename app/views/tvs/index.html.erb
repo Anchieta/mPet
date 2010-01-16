@@ -1,0 +1,30 @@
+<h1>Listing tvs</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Texto</th>
+    <th>Img</th>
+    <th>Utl</th>
+    <th>Target</th>
+    <th>Empresa</th>
+  </tr>
+
+<% @tvs.each do |tv| %>
+  <tr>
+    <td><%=h tv.titulo %></td>
+    <td><%=h tv.texto %></td>
+    <td><%=h tv.img %></td>
+    <td><%=h tv.utl %></td>
+    <td><%=h tv.target %></td>
+    <td><%=h tv.empresa_id %></td>
+    <td><%= link_to 'Show', tv %></td>
+    <td><%= link_to 'Edit', edit_tv_path(tv) %></td>
+    <td><%= link_to 'Destroy', tv, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tv', new_tv_path %>

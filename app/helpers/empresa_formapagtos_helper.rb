@@ -1,0 +1,2 @@
+module EmpresaFormapagtosHelper
+end

@@ -1,0 +1,30 @@
+  <%= f.error_messages %>
+  <table border="1" width="400" cellpadding="2" cellspacing="2">
+    <tr>
+      <td width="100"><%= f.label :nome %></td>
+      <td width="300"><%= f.text_field :nome %></td>
+    </tr>
+    <tr>
+      <td width="100"><%= f.label :Abreviação %></td>
+      <td width="300"><%= f.text_field :abrev %></td>
+    </tr>
+    <tr>
+      <td width="100"><%= f.label :SEO %></td>
+      <td width="300"><%= f.text_field :nomeseo %></td>
+    </tr>
+    <tr>
+      <td width="100">Visivel</td>
+      <td width="300"><%= check_box("macro", "visivel", {}, "S", "N") %></td>
+    </tr>
+    <tr>
+      <td width="100">Ordem</td>
+      <td width="300">
+        <% value_array = [0,1, 2, 3, 4, 5] %>
+        <select name="macro[ordem]" value="macro.ordem">
+        <%= options_for_select(value_array, :selected=>@macro.ordem)  %>
+        </select>
+
+
+      </td>
+    </tr>
+  </table>

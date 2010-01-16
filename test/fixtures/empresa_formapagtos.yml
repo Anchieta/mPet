@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  empresa_id: 1
+  formapagto_id: 1
+
+two:
+  empresa_id: 1
+  formapagto_id: 1

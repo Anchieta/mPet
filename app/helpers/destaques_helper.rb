@@ -1,0 +1,2 @@
+module DestaquesHelper
+end

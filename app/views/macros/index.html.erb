@@ -1,0 +1,31 @@
+<h1>Lista Macros</h1>
+
+<table border="1" width="650" cellpadding="1">
+  <tr>
+    <th width="20"  align="center">Ordem</th>
+    <th width="160">Nome da Macro</th>
+    <th width="170">Nome SEO</th>
+    <th width="20"  align="center">Abrev</th>
+    <th width="20"  align="center">Visivel</th>
+    <th width="30">Micros</th>
+    <td colspan="3" width="180" align="center">Ação</td>
+  </tr>
+
+<% @macros.each do |macro| %>
+  <tr>
+    <td><%=h macro.ordem %></td>
+    <td>&nbsp;<%=h macro.nome %></td>
+    <td>&nbsp;<%=h macro.nomeseo %></td>
+    <td align="center"><%=h macro.abrev %></td>
+    <td align="center"><%= sim_ou_nao(macro.visivel) %></td>
+    <td align="right"><%=h macro.micros.count %>&nbsp;</td>
+    <td><%= link_to 'Show', macro %></td>
+    <td><%= link_to 'Edit', edit_macro_path(macro) %></td>
+    <td><%= link_to 'Destroy', macro, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New macro', new_macro_path %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyString
+  fanta: MyString
+  cnpj: MyString
+  ie: MyString
+  logop: MyString
+  logog: MyString
+  site: MyString
+  pchave: MyString
+
+two:
+  nome: MyString
+  fanta: MyString
+  cnpj: MyString
+  ie: MyString
+  logop: MyString
+  logog: MyString
+  site: MyString
+  pchave: MyString

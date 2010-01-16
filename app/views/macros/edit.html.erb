@@ -1,0 +1,11 @@
+<h1>Editing macro</h1>
+
+<% form_for(@macro) do |f| %>
+  <%= render :partial=>"form", :locals=>{:f=>f} %>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @macro %> |
+<%= link_to 'Back', macros_path %>

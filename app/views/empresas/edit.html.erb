@@ -1,0 +1,44 @@
+<h1>Editing empresa</h1>
+
+<% form_for(@empresa) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :fanta %><br />
+    <%= f.text_field :fanta %>
+  </p>
+  <p>
+    <%= f.label :cnpj %><br />
+    <%= f.text_field :cnpj %>
+  </p>
+  <p>
+    <%= f.label :ie %><br />
+    <%= f.text_field :ie %>
+  </p>
+  <p>
+    <%= f.label :logop %><br />
+    <%= f.text_field :logop %>
+  </p>
+  <p>
+    <%= f.label :logog %><br />
+    <%= f.text_field :logog %>
+  </p>
+  <p>
+    <%= f.label :site %><br />
+    <%= f.text_field :site %>
+  </p>
+  <p>
+    <%= f.label :pchave %><br />
+    <%= f.text_field :pchave %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @empresa %> |
+<%= link_to 'Back', empresas_path %>

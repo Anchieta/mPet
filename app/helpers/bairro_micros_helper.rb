@@ -1,0 +1,2 @@
+module BairroMicrosHelper
+end

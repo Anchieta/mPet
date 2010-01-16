@@ -1,0 +1,20 @@
+<h1>Editing resenha</h1>
+
+<% form_for(@resenha) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :texto %><br />
+    <%= f.text_area :texto %>
+  </p>
+  <p>
+    <%= f.label :empresa_id %><br />
+    <%= f.text_field :empresa_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @resenha %> |
+<%= link_to 'Back', resenhas_path %>

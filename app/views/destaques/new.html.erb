@@ -1,0 +1,31 @@
+<h1>New destaque</h1>
+
+<% form_for(@destaque) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :texto %><br />
+    <%= f.text_field :texto %>
+  </p>
+  <p>
+    <%= f.label :imgp %><br />
+    <%= f.text_field :imgp %>
+  </p>
+  <p>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.label :target %><br />
+    <%= f.text_field :target %>
+  </p>
+  <p>
+    <%= f.label :empresa_id %><br />
+    <%= f.text_field :empresa_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', destaques_path %>

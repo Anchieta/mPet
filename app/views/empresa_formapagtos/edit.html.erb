@@ -1,0 +1,20 @@
+<h1>Editing empresa_formapagto</h1>
+
+<% form_for(@empresa_formapagto) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :empresa_id %><br />
+    <%= f.text_field :empresa_id %>
+  </p>
+  <p>
+    <%= f.label :formapagto_id %><br />
+    <%= f.text_field :formapagto_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @empresa_formapagto %> |
+<%= link_to 'Back', empresa_formapagtos_path %>

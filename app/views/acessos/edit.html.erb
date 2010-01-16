@@ -1,0 +1,16 @@
+<h1>Editing acesso</h1>
+
+<% form_for(@acesso) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @acesso %> |
+<%= link_to 'Back', acessos_path %>

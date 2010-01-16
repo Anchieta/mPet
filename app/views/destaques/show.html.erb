@@ -1,0 +1,28 @@
+<p>
+  <b>Texto:</b>
+  <%=h @destaque.texto %>
+</p>
+
+<p>
+  <b>Imgp:</b>
+  <%=h @destaque.imgp %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @destaque.url %>
+</p>
+
+<p>
+  <b>Target:</b>
+  <%=h @destaque.target %>
+</p>
+
+<p>
+  <b>Empresa:</b>
+  <%=h @destaque.empresa_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_destaque_path(@destaque) %> |
+<%= link_to 'Back', destaques_path %>

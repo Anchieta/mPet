@@ -1,0 +1,31 @@
+<table border="1" width="400" cellpadding="2" cellspacing="2">
+  <tr>
+    <td colspan="3" align="center">Macro</td>
+  </tr>
+   <tr>
+     <td width="100">Nome:</td>
+     <td width="300"><%=h @macro.nome %></td>
+   </tr>
+   <tr>
+     <td width="100">Nome SEO:</td>
+     <td width="300"><%=h @macro.nomeseo %></td>
+   </tr>
+   <tr>
+     <td width="100">Abreviação:</td>
+     <td width="300"><%=h @macro.abrev %></td>
+   </tr>
+   <tr>
+     <td width="100">Total micros</td>
+     <td width="300"><%=h @macro.micros.count %></td>
+   </tr>
+</table>
+<br/>
+<div id="errors"></div>
+<div id="micro">
+   <%= render :partial => "/micros/new_micro", :locals=>{:macro=>@macro}  %>
+</div>
+<br/>
+<%= link_to 'Edit', edit_macro_path(@macro) %> |
+<%= link_to 'Back', macros_path %>
+<br/>
+<%= comentarios @macro.micros %>

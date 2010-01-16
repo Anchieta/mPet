@@ -1,0 +1,19 @@
+<h1>New atividade_unidade</h1>
+
+<% form_for(@atividade_unidade) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :unidade_id %><br />
+    <%= f.text_field :unidade_id %>
+  </p>
+  <p>
+    <%= f.label :atividade_id %><br />
+    <%= f.text_field :atividade_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', atividade_unidades_path %>

@@ -1,0 +1,22 @@
+<h1>Listing resenhas</h1>
+
+<table>
+  <tr>
+    <th>Texto</th>
+    <th>Empresa</th>
+  </tr>
+
+<% @resenhas.each do |resenha| %>
+  <tr>
+    <td><%=h resenha.texto %></td>
+    <td><%=h resenha.empresa_id %></td>
+    <td><%= link_to 'Show', resenha %></td>
+    <td><%= link_to 'Edit', edit_resenha_path(resenha) %></td>
+    <td><%= link_to 'Destroy', resenha, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New resenha', new_resenha_path %>

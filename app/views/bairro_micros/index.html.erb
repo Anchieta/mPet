@@ -1,0 +1,22 @@
+<h1>Listing bairro_micros</h1>
+
+<table>
+  <tr>
+    <th>Bairro</th>
+    <th>Micro</th>
+  </tr>
+
+<% @bairro_micros.each do |bairro_micro| %>
+  <tr>
+    <td><%=h bairro_micro.bairro_id %></td>
+    <td><%=h bairro_micro.micro_id %></td>
+    <td><%= link_to 'Show', bairro_micro %></td>
+    <td><%= link_to 'Edit', edit_bairro_micro_path(bairro_micro) %></td>
+    <td><%= link_to 'Destroy', bairro_micro, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New bairro_micro', new_bairro_micro_path %>

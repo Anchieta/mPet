@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyString
+  nomeseo: MyString
+  ordem: 1
+  visivel: MyString
+  macro_id: 1
+
+two:
+  nome: MyString
+  nomeseo: MyString
+  ordem: 1
+  visivel: MyString
+  macro_id: 1

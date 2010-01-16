@@ -1,0 +1,20 @@
+<h1>Editing cidade</h1>
+
+<% form_for(@cidade) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :uf %><br />
+    <%= f.text_field :uf %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @cidade %> |
+<%= link_to 'Back', cidades_path %>

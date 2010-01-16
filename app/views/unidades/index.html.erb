@@ -1,0 +1,46 @@
+<h1>Listing unidades</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Logradouro</th>
+    <th>Compl</th>
+    <th>Cep</th>
+    <th>Tel</th>
+    <th>Email</th>
+    <th>Horaatendimento</th>
+    <th>Obs</th>
+    <th>Visivel</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Empresa</th>
+    <th>Tplogradouro</th>
+    <th>Macro</th>
+  </tr>
+
+<% @unidades.each do |unidade| %>
+  <tr>
+    <td><%=h unidade.nome %></td>
+    <td><%=h unidade.logradouro %></td>
+    <td><%=h unidade.compl %></td>
+    <td><%=h unidade.cep %></td>
+    <td><%=h unidade.tel %></td>
+    <td><%=h unidade.email %></td>
+    <td><%=h unidade.horaatendimento %></td>
+    <td><%=h unidade.obs %></td>
+    <td><%=h unidade.visivel %></td>
+    <td><%=h unidade.latitude %></td>
+    <td><%=h unidade.longitude %></td>
+    <td><%=h unidade.empresa_id %></td>
+    <td><%=h unidade.tplogradouro_id %></td>
+    <td><%=h unidade.macro %></td>
+    <td><%= link_to 'Show', unidade %></td>
+    <td><%= link_to 'Edit', edit_unidade_path(unidade) %></td>
+    <td><%= link_to 'Destroy', unidade, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New unidade', new_unidade_path %>

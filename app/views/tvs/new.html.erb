@@ -1,0 +1,35 @@
+<h1>New tv</h1>
+
+<% form_for(@tv) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </p>
+  <p>
+    <%= f.label :texto %><br />
+    <%= f.text_field :texto %>
+  </p>
+  <p>
+    <%= f.label :img %><br />
+    <%= f.text_field :img %>
+  </p>
+  <p>
+    <%= f.label :utl %><br />
+    <%= f.text_field :utl %>
+  </p>
+  <p>
+    <%= f.label :target %><br />
+    <%= f.text_field :target %>
+  </p>
+  <p>
+    <%= f.label :empresa_id %><br />
+    <%= f.text_field :empresa_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', tvs_path %>

@@ -1,0 +1,22 @@
+<h1>Listing formapagtos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Imgp</th>
+  </tr>
+
+<% @formapagtos.each do |formapagto| %>
+  <tr>
+    <td><%=h formapagto.nome %></td>
+    <td><%=h formapagto.imgp %></td>
+    <td><%= link_to 'Show', formapagto %></td>
+    <td><%= link_to 'Edit', edit_formapagto_path(formapagto) %></td>
+    <td><%= link_to 'Destroy', formapagto, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New formapagto', new_formapagto_path %>
