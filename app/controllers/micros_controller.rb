@@ -38,7 +38,7 @@ class MicrosController < ApplicationController
     @micro = Micro.find(params[:id])
     #session[:micro] = @micro
     #format.html { render :action => "/macros/#{@micro.macro_id}" }
-    render :partial=>"/micros/new_micro", :locals=>{:micro=>@micro}
+    render :partial=>"/micros/new_micro", :locals=>{:macro=>@micro.macro}
   end
 
   # POST /micros
@@ -48,6 +48,7 @@ class MicrosController < ApplicationController
     @micro = Micro.create!(params[:micro])
 
     respond_to do |format|
+      flash[:notice] = 'Micro was successfully created.'
       format.js
 #      if @micro.save
 #        flash[:notice] = %W'Micro was successfully created.'

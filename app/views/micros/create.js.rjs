@@ -1,1 +1,3 @@
 page.insert_html :bottom, 'tbl_micros', :partial=>'/micros/lista_micros', :locals=>{ :micros=>[Micro.last] }
+page.replace_html :errors, flash[:notice]
+page[:form_micro].reset
