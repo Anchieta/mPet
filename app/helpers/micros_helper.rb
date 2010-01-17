@@ -13,7 +13,6 @@ module MicrosHelper
          comentarios << "  </tr>"
 
          comentarios << render(:partial=>"/micros/lista_micros", :locals=>{:micros=>micros}) unless micros.empty?
-         #--- Nao funciona -- comentarios << render(:partial=>"/micros/lista_micros", :collection=>micros) unless micros.empty?
 
          comentarios << "</table>"
      end
