@@ -1,1 +1,0 @@
-page.insert_html :bottom, 'tbl_micros', :partial=>'/micros/lista_micros', :locals=>{ :micros=>Micro.find(:all) }
