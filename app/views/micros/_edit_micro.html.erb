@@ -1,0 +1,33 @@
+<% remote_form_for(@micro) do |f| %>
+  <table border="1" width="400" cellpadding="2" cellspacing="2">
+    <tr>
+      <td colspan="2"  align="center">Edição de Micro</td>
+    </tr>
+    <tr>
+      <td width="100"><%= f.label :nome %></td>
+      <td width="300"><%= f.text_field :nome %></td>
+    </tr>
+    <tr>
+      <td width="100">Nome SEO</td>
+      <td width="300"><%= f.text_field :nomeseo%> </td>
+    </tr>
+    <tr>
+      <td width="100">Visivel</td>
+      <td width="300"><%= check_box("micro", "visivel", {}, "S","N") %> </td>
+    </tr>
+    <tr>
+      <td width="100">Ordem</td>
+      <td width="300">
+        <%= hidden_field_tag 'micro[macro_id]', @micro.macro.id %>
+        <%#= f.hidden_field(:micro, :macro_id, :value => macro.id)%>
+        <% value_array = Array.new(20) {|n| n+1} %>
+        <select name="micro[ordem]" value="micro.ordem">
+          <%= options_for_select(value_array) %>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><%= f.submit 'Edit' %></td>
+    </tr>
+  </table>
+<% end %>
