@@ -72,6 +72,7 @@ class MicrosController < ApplicationController
         format.js do
           render :update do |page|
             page.replace_html :"ordem_micro#{@micro.id}", @micro.ordem
+            page.replace_html :micro, :partial => '/micros/new_micro', :locals => {:macro => @micro.macro}
           end
         end
       else
