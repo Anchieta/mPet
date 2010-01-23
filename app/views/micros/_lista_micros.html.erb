@@ -1,6 +1,6 @@
 <% micros.each do |micro| %>
   <tr id="micro_<%= micro.id %>">
-    <td id="<%="ordem_micro#{micro.id}"%>">&nbsp;<%=h micro.ordem %></td>
+    <td>&nbsp;<span id="<%="ordem_micro#{micro.id}"%>"><%=h micro.ordem %></span></td>
     <td>&nbsp;<%=h micro.nome %></td>
     <td>&nbsp;<%=h micro.nomeseo %></td>
     <td align="center"><%= sim_ou_nao(micro.visivel) %></td>
