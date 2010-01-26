@@ -49,12 +49,21 @@ class MicrosController < ApplicationController
   # POST /micros
   # POST /micros.xml
   def create
-    #@micro = Micro.new(params[:micro])
-    @micro = Micro.create!(params[:micro])
-
-    respond_to do |format|
-      flash[:notice] = 'Micro was successfully created.'
-      format.js
+    @micro = Micro.new(params[:micro])
+    if @micro.save
+      respond_to do |format|
+        flash[:notice] = 'Micro was successfully created.'
+        format.js
+      end
+    else
+      respond_to do |format|
+        format.js do
+          render :update do |page|
+            page.replace_html 'errors', @micro.errors.full_messages
+            page.replace_html :micro, :partial => '/micros/new_micro', :locals => {:macro => Macro.find(params[:micro][:macro_id])}
+          end
+        end
+      end
     end
   end
 
