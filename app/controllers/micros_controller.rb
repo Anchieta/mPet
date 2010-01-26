@@ -74,14 +74,13 @@ class MicrosController < ApplicationController
 
     respond_to do |format|
       if @micro.update_attributes(params[:micro])
-        flash[:notice] = 'Micro was successfully updated.'
         format.html { redirect_to(:controller=>"macros", :action=>"show", :id=>"1") }
         format.xml  { head :ok }
         format.js do
           render :update do |page|
             page.replace_html :"ordem_micro#{@micro.id}", @micro.ordem
             page.replace_html :micro, :partial => '/micros/new_micro', :locals => {:macro => @micro.macro}
-            page.call 'Form.reset', 'form_micro'
+            page[:form_micro].reset
           end
         end
       else
