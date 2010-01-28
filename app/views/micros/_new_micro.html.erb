@@ -20,7 +20,7 @@
       <td width="300">
         <%= hidden_field_tag 'micro[macro_id]', macro.id %>
         <% value_array = Array.new(20) {|n| n+1} %>
-        <select name="micro[ordem]" value="micro.ordem">
+        <select id="micro_ordem" name="micro[ordem]" value="micro.ordem">
           <%= options_for_select(value_array) %>
         </select>
       </td>

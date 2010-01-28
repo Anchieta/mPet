@@ -80,7 +80,12 @@ class MicrosController < ApplicationController
           render :update do |page|
             page.replace_html :"ordem_micro#{@micro.id}", @micro.ordem
             page.replace_html :micro, :partial => '/micros/new_micro', :locals => {:macro => @micro.macro}
-            page[:form_micro].reset
+
+            #page[:form_micro].reset
+            page[:micro_nome].clear
+            page[:micro_nomeseo].clear
+            page[:micro_visivel].checked = false
+            page[:micro_ordem].clear
           end
         end
       else
