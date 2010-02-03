@@ -8,15 +8,15 @@
       <td width="300"><%= f.text_field :nome %></td>
     </tr>
     <tr>
-      <td width="100">Nome SEO</td>
+      <td width="100"><%= f.label :nomeseo %></td>
       <td width="300"><%= f.text_field :nomeseo%> </td>
     </tr>
     <tr>
-      <td width="100">Visivel</td>
+      <td width="100"><%= f.label :visivel %></td>
       <td width="300"><%= check_box("micro", "visivel", {}, "S","N") %> </td>
     </tr>
     <tr>
-      <td width="100">Ordem</td>
+      <td width="100"><%= f.label :ordem %></td>
       <td width="300">
         <%= hidden_field_tag 'micro[macro_id]', macro.id %>
         <% value_array = Array.new(20) {|n| n+1} %>
@@ -26,7 +26,7 @@
       </td>
     </tr>
     <tr>
-      <td colspan="2" align="center"><%= f.submit 'Create', :onclick => "Effect.Appear('spinner');" %></td>
+      <td colspan="2" align="center"><%= f.submit 'Create' %></td>
     </tr>
   </table>
 <% end %>
