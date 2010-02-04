@@ -59,8 +59,10 @@ class MicrosController < ApplicationController
       respond_to do |format|
         format.js do
           render :update do |page|
-            page.replace_html 'errors', @micro.errors.full_messages
             page.replace_html :micro, :partial => '/micros/new_micro', :locals => {:macro => Macro.find(params[:micro][:macro_id])}
+            page.replace_html 'error_nome', @micro.errors.on(:nome)
+            page.replace_html 'error_nomeseo', @micro.errors.on(:nomeseo)
+            page.replace_html 'error_ordem', @micro.errors.on(:ordem)
           end
         end
       end

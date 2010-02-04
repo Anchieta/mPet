@@ -6,10 +6,16 @@
     <tr>
       <td width="100"><%= f.label :nome %></td>
       <td width="300"><%= f.text_field :nome %></td>
+      <td width="100">
+        <span id="error_nome" style="color:#F00"></span>
+      </td>
     </tr>
     <tr>
       <td width="100"><%= f.label :nomeseo %></td>
       <td width="300"><%= f.text_field :nomeseo%> </td>
+      <td width="100">
+        <span id="error_nomeseo" style="color:#F00"></span>
+      </td>
     </tr>
     <tr>
       <td width="100"><%= f.label :visivel %></td>
@@ -23,6 +29,9 @@
         <select id="micro_ordem" name="micro[ordem]" value="micro.ordem">
           <%= options_for_select(value_array) %>
         </select>
+      </td>
+      <td width="100">
+        <span id="error_ordem" style="color:#F00"></span>
       </td>
     </tr>
     <tr>
