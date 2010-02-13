@@ -6,10 +6,16 @@
     <tr>
       <td width="100"><%= f.label :nome %></td>
       <td width="300"><%= f.text_field :nome %></td>
+      <td width="100">
+        <span id="error_nome" style="color:#F00"></span>
+      </td>
     </tr>
     <tr>
       <td width="100">Nome SEO</td>
       <td width="300"><%= f.text_field :nomeseo%> </td>
+      <td width="100">
+        <span id="error_nomeseo" style="color:#F00"></span>
+      </td>
     </tr>
     <tr>
       <td width="100">Visivel</td>
@@ -23,6 +29,9 @@
         <select name="micro[ordem]" value="micro.ordem">
           <%= options_for_select(Array.new(20){|n| n+1}, :selected => @micro.ordem) %>
         </select>
+      </td>
+      <td width="100">
+        <span id="error_ordem" style="color:#F00"></span>
       </td>
     </tr>
     <tr>

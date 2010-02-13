@@ -83,7 +83,6 @@ class MicrosController < ApplicationController
             page.replace_html :"ordem_micro#{@micro.id}", @micro.ordem
             page.replace_html :micro, :partial => '/micros/new_micro', :locals => {:macro => @micro.macro}
 
-            #page[:form_micro].reset
             page[:micro_nome].clear
             page[:micro_nomeseo].clear
             page[:micro_visivel].checked = false
@@ -93,6 +92,13 @@ class MicrosController < ApplicationController
       else
         format.html { render :action => "edit" }
         format.xml  { render :xml => @micro.errors, :status => :unprocessable_entity }
+        format.js do
+          render :update do |page|
+            page.replace_html 'error_nome', @micro.errors.on(:nome)
+            page.replace_html 'error_nomeseo', @micro.errors.on(:nomeseo)
+            page.replace_html 'error_ordem', @micro.errors.on(:ordem)
+          end
+        end
       end
     end
   end
