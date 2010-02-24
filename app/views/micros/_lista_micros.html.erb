@@ -1,11 +1,5 @@
 <% micros.each do |micro| %>
   <tr id="micro_<%= micro.id %>">
-    <td>&nbsp;<span id="<%="ordem_micro#{micro.id}"%>"><%=h micro.ordem %></span></td>
-    <td>&nbsp;<%=h micro.nome %></td>
-    <td>&nbsp;<%=h micro.nomeseo %></td>
-    <td align="center"><%= sim_ou_nao(micro.visivel) %></td>
-    <td align="center"><%= link_to 'Show', micro %></td>
-    <td><%= link_to_remote  "Edit",  :url   => edit_micro_path(micro.id), :method=>"get" %></td>
-    <td><%= link_to_remote 'EXCLUIR', :url=>micro_path(micro), :confirm => 'Are you sure?', :method => :delete %></td>
+    <%= render :partial => '/micros/micro_line_content', :locals => {:micro => micro} %>
   </tr>
 <% end %>

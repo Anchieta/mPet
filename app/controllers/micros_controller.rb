@@ -82,6 +82,7 @@ class MicrosController < ApplicationController
           render :update do |page|
             page.replace_html :"ordem_micro#{@micro.id}", @micro.ordem
             page.replace_html :micro, :partial => '/micros/new_micro', :locals => {:macro => @micro.macro}
+            page.replace_html "micro_#{@micro.id}", :partial=>'/micros/micro_line_content', :locals=>{ :micro => @micro }
 
             page[:micro_nome].clear
             page[:micro_nomeseo].clear

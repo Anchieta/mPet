@@ -1,5 +1,7 @@
-page.insert_html :bottom, 'tbl_micros', :partial=>'/micros/lista_micros', :locals=>{ :micros=>[Micro.last] }
-page.replace_html :errors, flash[:notice]
+page.insert_html :bottom, 'tbl_micros', :partial=>'/micros/lista_micros', :locals=>{ :micros => [@micro] }
+page.replace_html :micro, :partial => '/micros/new_micro', :locals => {:macro => @micro.macro}
+page.replace_html :messages, flash[:notice]
+
 page[:micro_nome].clear
 page[:micro_nomeseo].clear
 page[:micro_visivel].checked = false
