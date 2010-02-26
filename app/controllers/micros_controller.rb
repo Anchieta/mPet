@@ -113,11 +113,18 @@ class MicrosController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(micros_url) }
       format.xml  { head :ok }
-       format.js do
-          render :update do |page|
-             page.visual_effect :fade, "micro_#{params[:id]}"
-          end
-       end
+      format.js do
+        render :update do |page|
+          page.visual_effect :fade, "micro_#{params[:id]}"
+        end
+      end
+    end
+  end
+
+  def back_to_new_partial
+    macro = Macro.find(params[:macro_id])
+    render :update do |page|
+      page.replace_html :micro, :partial => '/micros/new_micro', :locals => {:macro => macro}
     end
   end
 end
