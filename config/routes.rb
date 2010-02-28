@@ -14,7 +14,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :empresas
   map.resources :formapagtos
   map.resources :macros
-  map.resources :micros
+  map.resources :micros, :collection => {:back_to_new_partial => :post}
   map.resources :resenhas
   map.resources :tplogradouros
   map.resources :tvs

@@ -37,7 +37,7 @@
     <tr>
       <td colspan="2" align="center">
         <%= f.submit 'Edit' %>
-        <%= link_to_remote 'Voltar para criar um novo', :url => { :controller => 'micros', :action => 'back_to_new_partial', :macro_id => @micro.macro.id} %>
+        <%= button_to_remote 'Voltar para criar um novo', :url => { :controller => 'micros', :action => 'back_to_new_partial', :macro_id => @micro.macro.id} %>
       </td>
     </tr>
   </table>
