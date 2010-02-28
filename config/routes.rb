@@ -19,8 +19,4 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :tplogradouros
   map.resources :tvs
   map.resources :unidades
-  
-  map.connect '/path_macros/:id', :controller=>'macros', :action=>'show'
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
 end
